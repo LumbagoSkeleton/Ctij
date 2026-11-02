@@ -2,12 +2,19 @@ extends CharacterBody2D
 @export var speed = 400
 
 
-func getInput():
+func get_input():
 	var inputDirection=Input.get_vector("Move Left","Move Right","Move Up","Move Down")
+	var isAttacking=false
+	if Input.is_action_pressed("Attack"):
+		isAttacking=true
 	velocity=inputDirection*speed
 
+func attack(event):
+	
 
 func _physics_process(delta: float) -> void:
-	getInput()
+	get_input()
 	move_and_slide()
+	if isAttacking==true:
+		
 	

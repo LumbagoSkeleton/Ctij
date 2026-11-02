@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://g5f0epkxba7j"]
 
 [ext_resource type="Script" uid="uid://bl110lr47anbj" path="res://player/playerCharacter.gd" id="1_7mixf"]
-[ext_resource type="Texture2D" uid="uid://c4p5e4ic81cx6" path="res://assets/icon.svg" id="2_nevrd"]
+[ext_resource type="Texture2D" uid="uid://dteybqkhrfy8x" path="res://assets/ctij_mc_walk_up.png" id="2_bnwni"]
 
 [node name="Node2D" type="Node2D" unique_id=2123107016]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=563151225]
 script = ExtResource("1_7mixf")
-speed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2061786301]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=745142755]
-texture = ExtResource("2_nevrd")
+texture = ExtResource("2_bnwni")

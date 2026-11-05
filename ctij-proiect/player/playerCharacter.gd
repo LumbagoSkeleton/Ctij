@@ -1,20 +1,20 @@
 extends CharacterBody2D
+
 @export var speed = 400
-var isAttacking=false
+
 var movement_direction_var = ""
 
 func _ready() -> void:
 	if speed == null:
-		speed=400
+		speed = 400
 		
-func get_input():
+func player_movement():
 	var inputDirection=Input.get_vector("Move Left","Move Right","Move Up","Move Down")
-	if Input.is_action_pressed("Attack"):
-		isAttacking=true
 	velocity=inputDirection*speed
 
 func movement_direction():
 	
+	# add a default state for when no direction is pressed
 	if Input.is_action_pressed("Move Right"):
 		
 		movement_direction_var = "right"
@@ -37,9 +37,7 @@ func movement_direction():
 		$Sprite2D.texture = load("res://assets/ctij_mc_walk_up.png")
 
 func _physics_process(delta: float) -> void:
-	get_input()
-	movement_direction()
+	player_movement()
 	move_and_slide()
-	if isAttacking==true:
-		pass
+	movement_direction()
 	

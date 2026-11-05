@@ -13,7 +13,7 @@ func get_input():
 		isAttacking=true
 	velocity=inputDirection*speed
 
-func attack(event):
+func attack_spawn_hitbox(event):
 	pass
 
 func _physics_process(delta: float) -> void:

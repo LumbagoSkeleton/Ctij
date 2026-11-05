@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://g5f0epkxba7j"]
 
 [ext_resource type="Script" uid="uid://bl110lr47anbj" path="res://player/playerCharacter.gd" id="1_7mixf"]
-[ext_resource type="Texture2D" uid="uid://dteybqkhrfy8x" path="res://assets/ctij_mc_walk_up.png" id="2_bnwni"]
+[ext_resource type="Texture2D" uid="uid://3el7c0u5h1au" path="res://assets/ctij_mc_walk_down.png" id="2_pcxq3"]
+[ext_resource type="Script" uid="uid://c0tex168c6my2" path="res://components/health.gd" id="3_pcxq3"]
 
 [node name="Node2D" type="Node2D" unique_id=2123107016]
 
@@ -11,4 +12,8 @@ script = ExtResource("1_7mixf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2061786301]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=745142755]
-texture = ExtResource("2_bnwni")
+texture = ExtResource("2_pcxq3")
+
+[node name="Health" type="Node" parent="CharacterBody2D" unique_id=2102791748]
+script = ExtResource("3_pcxq3")
+metadata/_custom_type_script = "uid://c0tex168c6my2"

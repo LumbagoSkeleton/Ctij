@@ -17,3 +17,6 @@ texture = ExtResource("2_pcxq3")
 [node name="Health" type="Node" parent="CharacterBody2D" unique_id=2102791748]
 script = ExtResource("3_pcxq3")
 metadata/_custom_type_script = "uid://c0tex168c6my2"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1110956275]
+zoom = Vector2(3, 3)

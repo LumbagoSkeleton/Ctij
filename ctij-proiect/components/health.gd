@@ -52,7 +52,7 @@ func set_imortality(value: bool):
 func get_imortality() ->bool:
 	return imortality
 	
-func set_iframes(time: float):
+func set_iframes(time: float = 1.0):
 	if imortality_timer == null:
 		imortality_timer=Timer.new()
 		imortality_timer.one_shot = true

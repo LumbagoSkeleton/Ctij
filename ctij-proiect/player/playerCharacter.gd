@@ -21,18 +21,17 @@ func movement_direction():
 		$Sprite2D.texture =load("res://assets/ctij_mc_walk_side.png")
 		$Sprite2D.flip_h = false
 			
-	if Input.is_action_pressed("Move Left"):
+	elif Input.is_action_pressed("Move Left"):
 		
 		movement_direction_var = "left"
 		$Sprite2D.texture = load("res://assets/ctij_mc_walk_side.png")
 		$Sprite2D.flip_h = true
 		
-	if Input.is_action_pressed("Move Down"):
+	elif Input.is_action_pressed("Move Down"):
 		movement_direction_var = "down"
 		$Sprite2D.texture = load("res://assets/ctij_mc_walk_down.png")
 		
-	if Input.is_action_pressed("Move Up"):
-		
+	elif Input.is_action_pressed("Move Up"):
 		movement_direction_var = "up"
 		$Sprite2D.texture = load("res://assets/ctij_mc_walk_up.png")
 

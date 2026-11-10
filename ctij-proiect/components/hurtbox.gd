@@ -3,10 +3,12 @@ extends Area2D
 
 signal recieved_damage(damage: int)
 
-#@export var health # of type health class
+@export var entity_health: Health
+
+func _ready() -> void:
+	connect("area_entered", on_area_entered)
 
 func on_area_entered(hitbox: HitBox) -> void:
 	if hitbox != null:
-		pass
-		#take damage once health system is implemented
-		# send signal that you took damage
+		entity_health.health -= hitbox.damage
+		recieved_damage.emit(hitbox.damage)

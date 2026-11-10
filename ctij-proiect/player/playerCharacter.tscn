@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://g5f0epkxba7j"]
 
 [ext_resource type="Script" uid="uid://bl110lr47anbj" path="res://player/playerCharacter.gd" id="1_7mixf"]
+[ext_resource type="Texture2D" uid="uid://dteybqkhrfy8x" path="res://assets/ctij_mc_walk_up.png" id="2_bnwni"]
 [ext_resource type="Texture2D" uid="uid://3el7c0u5h1au" path="res://assets/ctij_mc_walk_down.png" id="2_pcxq3"]
+[ext_resource type="Texture2D" uid="uid://bkugmtawifvx5" path="res://assets/ctij_mc_idle_down.png" id="2_qkhfv"]
 [ext_resource type="Script" uid="uid://c0tex168c6my2" path="res://components/health.gd" id="3_pcxq3"]
 [ext_resource type="Texture2D" uid="uid://mqikvh2n05gf" path="res://assets/ctij_mc_idle_side.png" id="3_t4ikk"]
 [ext_resource type="Texture2D" uid="uid://g5s1ydh6lcyj" path="res://assets/ctij_mc_idle_up.png" id="4_r7u25"]

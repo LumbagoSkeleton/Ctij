@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 400
+@export var speed = 150
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 
 var movement_direction_var = ""
@@ -9,7 +9,7 @@ var is_idle = true
 
 func _ready() -> void:
 	if speed == null:
-		speed = 400
+		speed = 150
 	sprite_2d.play("idle_down")
 
 func player_movement():

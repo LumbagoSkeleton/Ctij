@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://cn565nt045daj"]
 
+[ext_resource type="Script" uid="uid://d1k0yeubp0b7f" path="res://components/hitbox.gd" id="1_dcab7"]
+[ext_resource type="Texture2D" uid="uid://c4p5e4ic81cx6" path="res://assets/icon.svg" id="2_lptji"]
+
 [node name="Sword" type="Node2D" unique_id=1242871754]
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1036075867]
+script = ExtResource("1_dcab7")
+metadata/_custom_type_script = "uid://d1k0yeubp0b7f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1353659487]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=379149008]
+texture = ExtResource("2_lptji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=411057471]

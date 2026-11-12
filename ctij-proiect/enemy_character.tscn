@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://hjci6ex0ap3v"]
+
+[ext_resource type="Script" uid="uid://bfqe1pv7lnkxo" path="res://entities/enemy_character.gd" id="1_10xie"]
+[ext_resource type="Script" uid="uid://c0tex168c6my2" path="res://components/health.gd" id="2_l5adm"]
+[ext_resource type="Script" uid="uid://bxq1mo7l06p6k" path="res://components/hurtbox.gd" id="3_3nlgy"]
+
+[node name="EnemyCharacter" type="Node2D" unique_id=1815874538]
+script = ExtResource("1_10xie")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1052829038]
+
+[node name="Health" type="Node" parent="." unique_id=2028813583]
+script = ExtResource("2_l5adm")
+metadata/_custom_type_script = "uid://c0tex168c6my2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1165808472]
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1444396429]
+collision_layer = 0
+script = ExtResource("3_3nlgy")
+metadata/_custom_type_script = "uid://bxq1mo7l06p6k"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1227635532]
+
+[connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

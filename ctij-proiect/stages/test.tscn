@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://g5f0epkxba7j" path="res://player/playerCharacter.tscn" id="1_ti1c1"]
 [ext_resource type="Texture2D" uid="uid://mw4el51rcnpp" path="res://stages/arena_bg1.png" id="2_u1sro"]
+[ext_resource type="PackedScene" uid="uid://df71yclomala8" path="res://entities/enemyCharacter.tscn" id="3_u1sro"]
 
 [node name="Test" type="Node2D" unique_id=1751654491]
 
@@ -9,3 +10,6 @@
 texture = ExtResource("2_u1sro")
 
 [node name="Node2D" parent="." unique_id=2123107016 instance=ExtResource("1_ti1c1")]
+
+[node name="EnemyCharacter" parent="." unique_id=1815874538 instance=ExtResource("3_u1sro")]
+position = Vector2(200, 0)

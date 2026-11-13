@@ -8,17 +8,17 @@ var inputDirection:Vector2 = Vector2.ZERO # no input
 var is_idle = true
 var is_left_mouse_pressed = false
 var is_left_mouse_held_down = false
+var player_sword : Sword
 
 func _ready() -> void:
 	if speed == null:
-		speed = 400
+		speed = 150
 	sprite_2d.play("idle_down")
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == 1 and event.is_pressed():
 			is_left_mouse_pressed= true
-			print("caca")
 		elif event.button_index == 1 and not event.is_pressed():
 			is_left_mouse_pressed = false
 	#maybe move all the inputs here later
@@ -29,13 +29,16 @@ func _process(delta: float) -> void:
 	
 
 func _is_left_mouse_held_down():
+	is_left_mouse_held_down = false
 	if not is_left_mouse_pressed:
-		return # add logic to attack
+		is_left_mouse_held_down = false
+		return 	
 	await get_tree().create_timer(0.5).timeout
 	if not is_left_mouse_pressed:
-		return # add logic to attack
+		is_left_mouse_held_down = false
+		return 
+		
 	is_left_mouse_held_down = true
-	# add logic to flail weapon around as if scared
 	
 			
 func player_movement():
@@ -92,7 +95,8 @@ func play_idle_anim():
 				play_anim("idle_side")
 				sprite_2d.flip_h = false
 
-
+func move_sword():
+	pass
 
 
 func _physics_process(delta: float) -> void:

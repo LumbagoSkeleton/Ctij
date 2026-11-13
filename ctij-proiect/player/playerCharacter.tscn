@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bl110lr47anbj" path="res://player/playerCharacter.gd" id="1_7mixf"]
 [ext_resource type="SpriteFrames" uid="uid://dkqcu83mvljk1" path="res://mc_animations.tres" id="3_40f8e"]
 [ext_resource type="Script" uid="uid://c0tex168c6my2" path="res://components/health.gd" id="3_pcxq3"]
+[ext_resource type="Script" uid="uid://jljhes1dxjx8" path="res://entities/sword.gd" id="5_vnqyj"]
 [ext_resource type="Script" uid="uid://d1k0yeubp0b7f" path="res://components/hitbox.gd" id="9_t4ikk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahknw"]
@@ -12,6 +13,7 @@ size = Vector2(24, 31)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=563151225]
 script = ExtResource("1_7mixf")
+speed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2014271339]
 position = Vector2(1, 2.5)
@@ -36,3 +38,7 @@ metadata/_custom_type_script = "uid://d1k0yeubp0b7f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/HitBox" unique_id=120546191]
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_ahknw")
+
+[node name="Sword" type="Node2D" parent="CharacterBody2D" unique_id=2066226107]
+script = ExtResource("5_vnqyj")
+metadata/_custom_type_script = "uid://jljhes1dxjx8"

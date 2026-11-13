@@ -96,11 +96,27 @@ func play_idle_anim():
 				sprite_2d.flip_h = false
 
 func move_sword():
-	pass
-
+	var mouse_position: Vector2 = get_viewport().get_mouse_position()
+	var viewport_size = get_viewport().get_visible_rect().size
+	var viewport_center = viewport_size / 2
+	var relative_mouse_position = viewport_center - mouse_position
+	
+	if relative_mouse_position.y < -abs(relative_mouse_position.x):
+		pass
+		# mouse is in bottom wedge of the screen
+	elif  relative_mouse_position.y > abs(relative_mouse_position.x):
+		pass
+		# mouse is in top wedge of the screen
+	elif relative_mouse_position.x < 0:
+		pass
+		# mouse is in right wedge of the screen
+	else:
+		pass
+		# mouse is in left wedge of the screen
 
 func _physics_process(delta: float) -> void:
 	player_movement()
+	move_sword()
 	move_and_slide()
 	movement_direction()
 	if inputDirection == Vector2.ZERO:

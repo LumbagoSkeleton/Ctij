@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bfqe1pv7lnkxo" path="res://entities/enemy_character.gd" id="1_1xxsw"]
 [ext_resource type="Script" uid="uid://c0tex168c6my2" path="res://components/health.gd" id="2_20fcd"]
+[ext_resource type="Texture2D" uid="uid://bg1b3eti4cy0r" path="res://assets/ctij_enemy_placeholder.png" id="2_j54vk"]
 [ext_resource type="Script" uid="uid://bxq1mo7l06p6k" path="res://components/hurtbox.gd" id="3_j54vk"]
 
 [node name="EnemyCharacter" type="Node2D" unique_id=1815874538]
 script = ExtResource("1_1xxsw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=557448213]
+texture = ExtResource("2_j54vk")
 
 [node name="Health" type="Node" parent="." unique_id=2028813583]
 script = ExtResource("2_20fcd")

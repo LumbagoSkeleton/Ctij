@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxr7l8gbwu7h7" path="res://assets/ctij_home_tileset.png" id="1_2r107"]
 [ext_resource type="PackedScene" uid="uid://g5f0epkxba7j" path="res://player/playerCharacter.tscn" id="2_c24go"]
+[ext_resource type="Texture2D" uid="uid://cvr4s6a7ygwvv" path="res://assets/ctij_station_tilemap.png" id="2_o8whc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r107"]
 texture = ExtResource("1_2r107")
@@ -60,6 +61,16 @@ texture_region_size = Vector2i(36, 24)
 tile_size = Vector2i(36, 24)
 sources/0 = SubResource("TileSetAtlasSource_c24go")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_beh4d"]
+texture = ExtResource("2_o8whc")
+texture_region_size = Vector2i(36, 24)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_opr5p"]
+tile_size = Vector2i(36, 24)
+sources/1 = SubResource("TileSetAtlasSource_beh4d")
+
 [node name="Home" type="Node2D" unique_id=2034620826]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=650969517]
@@ -67,8 +78,12 @@ tile_map_data = PackedByteArray("AAD8/wEAAAAAAAMAAAADAAEAAAADAAMAAAD9/wEAAAABAAM
 tile_set = SubResource("TileSet_6nqvd")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1144499723]
-tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAD9//7/AAAAAAAAAAD8//7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAD8////AAAAAAEAAAD9////AAAAAAEAAAD+////AAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAADAP//AAAAAAEAAAD8/wAAAAAAAAIAAAD9/wAAAAAAAAIAAAD+/wAAAAAAAAIAAAD//wAAAAAAAAIAAAAAAAAAAAAAAAIAAAABAAAAAAAAAAIAAAACAAAAAAAAAAIAAAADAAAAAAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAD9//7/AAABAAAAAAD8//7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAD8////AAAAAAEAAAD9////AAABAAEAAAD+////AAABAAEAAAD/////AAAAAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAAAAAEAAAADAP//AAABAAEAAAD8/wAAAAABAAIAAAD9/wAAAAABAAIAAAD+/wAAAAAAAAIAAAD//wAAAAABAAIAAAAAAAAAAAAAAAIAAAABAAAAAAAAAAIAAAACAAAAAAABAAIAAAADAAAAAAABAAIAAAA=")
 tile_set = SubResource("TileSet_wlpgp")
+
+[node name="Objects" type="TileMapLayer" parent="." unique_id=2101567074]
+tile_map_data = PackedByteArray("AAABAAEAAQAAAAAAAAACAAEAAQAAAAEAAAA=")
+tile_set = SubResource("TileSet_opr5p")
 
 [node name="Node2D" parent="." unique_id=2123107016 instance=ExtResource("2_c24go")]
 position = Vector2(-1, 60)

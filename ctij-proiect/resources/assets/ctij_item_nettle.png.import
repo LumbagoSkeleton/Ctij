@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dteybqkhrfy8x"
-path="res://.godot/imported/ctij_mc_walk_up.png-15f1c1dae3a60b8f66cbaac04f0d07f3.ctex"
+uid="uid://d3dia38ceoa4t"
+path="res://.godot/imported/ctij_item_nettle.png-f46f4f5db948429fe2653b91262e7b26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_mc_walk_up.png"
-dest_files=["res://.godot/imported/ctij_mc_walk_up.png-15f1c1dae3a60b8f66cbaac04f0d07f3.ctex"]
+source_file="res://resources/assets/ctij_item_nettle.png"
+dest_files=["res://.godot/imported/ctij_item_nettle.png-f46f4f5db948429fe2653b91262e7b26.ctex"]
 
 [params]
 

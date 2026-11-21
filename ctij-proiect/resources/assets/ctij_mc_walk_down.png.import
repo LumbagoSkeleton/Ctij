@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxr7l8gbwu7h7"
-path="res://.godot/imported/ctij_home_tileset.png-a8aeaab8a5a6e8d4cdee43b58c21b542.ctex"
+uid="uid://3el7c0u5h1au"
+path="res://.godot/imported/ctij_mc_walk_down.png-f745c42a39c1dccf6e7662f0ca4f1283.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_home_tileset.png"
-dest_files=["res://.godot/imported/ctij_home_tileset.png-a8aeaab8a5a6e8d4cdee43b58c21b542.ctex"]
+source_file="res://resources/assets/ctij_mc_walk_down.png"
+dest_files=["res://.godot/imported/ctij_mc_walk_down.png-f745c42a39c1dccf6e7662f0ca4f1283.ctex"]
 
 [params]
 

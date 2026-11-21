@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dkqcu83mvljk1"]
 
-[ext_resource type="Texture2D" uid="uid://bkugmtawifvx5" path="res://assets/ctij_mc_idle_down.png" id="1_dokq6"]
-[ext_resource type="Texture2D" uid="uid://mqikvh2n05gf" path="res://assets/ctij_mc_idle_side.png" id="2_6yifl"]
-[ext_resource type="Texture2D" uid="uid://g5s1ydh6lcyj" path="res://assets/ctij_mc_idle_up.png" id="3_s1fne"]
-[ext_resource type="Texture2D" uid="uid://3el7c0u5h1au" path="res://assets/ctij_mc_walk_down.png" id="4_k7b81"]
-[ext_resource type="Texture2D" uid="uid://veg3xychugsc" path="res://assets/ctij_mc_walk_side.png" id="5_w0egt"]
-[ext_resource type="Texture2D" uid="uid://dteybqkhrfy8x" path="res://assets/ctij_mc_walk_up.png" id="6_mjhs8"]
+[ext_resource type="Texture2D" uid="uid://bkugmtawifvx5" path="res://resources/assets/ctij_mc_idle_down.png" id="1_dokq6"]
+[ext_resource type="Texture2D" uid="uid://mqikvh2n05gf" path="res://resources/assets/ctij_mc_idle_side.png" id="2_6yifl"]
+[ext_resource type="Texture2D" uid="uid://g5s1ydh6lcyj" path="res://resources/assets/ctij_mc_idle_up.png" id="3_s1fne"]
+[ext_resource type="Texture2D" uid="uid://3el7c0u5h1au" path="res://resources/assets/ctij_mc_walk_down.png" id="4_k7b81"]
+[ext_resource type="Texture2D" uid="uid://veg3xychugsc" path="res://resources/assets/ctij_mc_walk_side.png" id="5_w0egt"]
+[ext_resource type="Texture2D" uid="uid://dteybqkhrfy8x" path="res://resources/assets/ctij_mc_walk_up.png" id="6_mjhs8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wqrp"]
 atlas = ExtResource("1_dokq6")

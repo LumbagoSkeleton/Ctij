@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bs37v1yhabu31"]
+
+[ext_resource type="Script" uid="uid://bdfqygx7p7al4" path="res://menu_canvas.gd" id="1_70yv6"]
+[ext_resource type="Script" uid="uid://bobm3l1hwa1yl" path="res://game_manager.gd" id="1_o2178"]
+[ext_resource type="Script" uid="uid://b8wvw3r28vo6i" path="res://current_stage.gd" id="1_smx3j"]
+
+[node name="GameManager" type="Node2D" unique_id=2015232671]
+script = ExtResource("1_o2178")
+
+[node name="CurrentStage" type="Node2D" parent="." unique_id=439731202]
+script = ExtResource("1_smx3j")
+
+[node name="MenuCanvas" type="Control" parent="." unique_id=530568543]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.333, 0.333)
+script = ExtResource("1_70yv6")

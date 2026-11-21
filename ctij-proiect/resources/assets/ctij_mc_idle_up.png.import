@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3dia38ceoa4t"
-path="res://.godot/imported/ctij_item_nettle.png-0f113fa394dad2c6a3c283ec536b8722.ctex"
+uid="uid://g5s1ydh6lcyj"
+path="res://.godot/imported/ctij_mc_idle_up.png-f55f7668285e7096e8e3053564062ab7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_item_nettle.png"
-dest_files=["res://.godot/imported/ctij_item_nettle.png-0f113fa394dad2c6a3c283ec536b8722.ctex"]
+source_file="res://resources/assets/ctij_mc_idle_up.png"
+dest_files=["res://.godot/imported/ctij_mc_idle_up.png-f55f7668285e7096e8e3053564062ab7.ctex"]
 
 [params]
 

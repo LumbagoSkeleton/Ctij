@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkugmtawifvx5"
-path="res://.godot/imported/ctij_mc_idle_down.png-01682aba3f9788b111cd7a4bd5006762.ctex"
+uid="uid://yemdnmraims5"
+path="res://.godot/imported/rusted_dagger.png-03e9b54c35d4b4748e39eff489b64ba7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_mc_idle_down.png"
-dest_files=["res://.godot/imported/ctij_mc_idle_down.png-01682aba3f9788b111cd7a4bd5006762.ctex"]
+source_file="res://resources/assets/rusted_dagger.png"
+dest_files=["res://.godot/imported/rusted_dagger.png-03e9b54c35d4b4748e39eff489b64ba7.ctex"]
 
 [params]
 

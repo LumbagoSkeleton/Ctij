@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cn565nt045daj"]
 
 [ext_resource type="Script" uid="uid://d1k0yeubp0b7f" path="res://components/hitbox.gd" id="1_dcab7"]
-[ext_resource type="Texture2D" uid="uid://c4p5e4ic81cx6" path="res://assets/icon.svg" id="2_lptji"]
+[ext_resource type="Texture2D" uid="uid://c4p5e4ic81cx6" path="res://resources/assets/icon.svg" id="2_lptji"]
 
 [node name="Sword" type="Node2D" unique_id=1242871754]
 

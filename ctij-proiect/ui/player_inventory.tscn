@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://b2jircixlff66"]
+
+[ext_resource type="Script" uid="uid://dby3femff4iqa" path="res://ui/player_inventory.gd" id="1_cmxws"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wlpgp"]
+specular_color = Color(0.3553136, 0.35531354, 0.35531357, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wlpgp"]
+font_size = 40
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6nqvd"]
+
+[node name="PlayerInventory" type="Control" unique_id=2132443785]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmxws")
+
+[node name="BG" type="TextureRect" parent="." unique_id=389587942]
+self_modulate = Color(0.18000486, 0.18000486, 0.18000486, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -610.0
+offset_top = -290.0
+offset_right = 610.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_wlpgp")
+
+[node name="InventoryUIContainer" type="VBoxContainer" parent="BG" unique_id=583289336]
+custom_minimum_size = Vector2(720, 580)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InventoryTitle" type="Label" parent="BG/InventoryUIContainer" unique_id=1481013822]
+layout_mode = 2
+text = "Inventory"
+label_settings = SubResource("LabelSettings_wlpgp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="Control" parent="BG/InventoryUIContainer" unique_id=84817395]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InventoryBG" type="TextureRect" parent="BG/InventoryUIContainer/Inventory" unique_id=997164772]
+self_modulate = Color(0, 0, 0, 0.25882354)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -210.5
+offset_right = 310.0
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_6nqvd")
+
+[node name="InventoryItemGridContainer" type="GridContainer" parent="BG/InventoryUIContainer/Inventory/InventoryBG" unique_id=2129499102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6

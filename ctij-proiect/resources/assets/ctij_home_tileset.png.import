@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g5s1ydh6lcyj"
-path="res://.godot/imported/ctij_mc_idle_up.png-a736fa4ae960c76cd65f8bf3e83b4f22.ctex"
+uid="uid://bxr7l8gbwu7h7"
+path="res://.godot/imported/ctij_home_tileset.png-64db4dc0c8b8947222efade2e59811d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_mc_idle_up.png"
-dest_files=["res://.godot/imported/ctij_mc_idle_up.png-a736fa4ae960c76cd65f8bf3e83b4f22.ctex"]
+source_file="res://resources/assets/ctij_home_tileset.png"
+dest_files=["res://.godot/imported/ctij_home_tileset.png-64db4dc0c8b8947222efade2e59811d2.ctex"]
 
 [params]
 

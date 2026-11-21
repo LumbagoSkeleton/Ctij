@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3el7c0u5h1au"
-path="res://.godot/imported/ctij_mc_walk_down.png-a5f94ea0a638fd160e85c5864e986c1a.ctex"
+uid="uid://bbnu1nqa4osfl"
+path="res://.godot/imported/ctij_item_rusted_dagger.png-c23f7962d80984c2f7c72668be1ed72f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_mc_walk_down.png"
-dest_files=["res://.godot/imported/ctij_mc_walk_down.png-a5f94ea0a638fd160e85c5864e986c1a.ctex"]
+source_file="res://resources/assets/ctij_item_rusted_dagger.png"
+dest_files=["res://.godot/imported/ctij_item_rusted_dagger.png-c23f7962d80984c2f7c72668be1ed72f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mqikvh2n05gf"
-path="res://.godot/imported/ctij_mc_idle_side.png-bab4725b9549008997c08b55fce11cd9.ctex"
+uid="uid://bg1b3eti4cy0r"
+path="res://.godot/imported/ctij_enemy_placeholder.png-bad0febd36c67b5210a84f6dbe7977da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_mc_idle_side.png"
-dest_files=["res://.godot/imported/ctij_mc_idle_side.png-bab4725b9549008997c08b55fce11cd9.ctex"]
+source_file="res://resources/assets/ctij_enemy_placeholder.png"
+dest_files=["res://.godot/imported/ctij_enemy_placeholder.png-bad0febd36c67b5210a84f6dbe7977da.ctex"]
 
 [params]
 

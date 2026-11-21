@@ -4,6 +4,9 @@ class_name Player
 
 @export var speed = 80
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var ui_canvas: UICanvas = $UICanvas
+
+signal toggle_inventory(do_open)
 
 var movement_direction_var = ""
 var inputDirection:Vector2 = Vector2.ZERO # no input
@@ -24,6 +27,14 @@ func _input(event: InputEvent) -> void:
 		elif event.button_index == 1 and not event.is_pressed():
 			is_left_mouse_pressed = false
 	#maybe move all the inputs here later
+	
+	if event is InputEventKey and event.is_action_pressed("Open inventory"):
+		if PlayerData.state == PlayerData.State.IDLE:
+			ui_canvas.toggle_inventory(true)
+			PlayerData.state = PlayerData.State.IN_MENU
+		else:
+			ui_canvas.toggle_inventory(false)
+			PlayerData.state = PlayerData.State.IDLE
 
 func _process(delta: float) -> void:
 	if is_left_mouse_pressed:
@@ -45,7 +56,10 @@ func _is_left_mouse_held_down():
 			
 func player_movement():
 	inputDirection=Input.get_vector("Move Left","Move Right","Move Up","Move Down")
-	velocity=inputDirection*speed
+	if PlayerData.state == PlayerData.State.IDLE:
+		velocity=inputDirection*speed
+	else:
+		velocity=Vector2.ZERO
 	
 	if inputDirection:
 		is_idle = false

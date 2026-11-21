@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvr4s6a7ygwvv"
-path="res://.godot/imported/ctij_station_tilemap.png-17795f4074d7e7a12958730b57c46659.ctex"
+uid="uid://mqikvh2n05gf"
+path="res://.godot/imported/ctij_mc_idle_side.png-8149b193970fafb239cb6b35981eb41a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ctij_station_tilemap.png"
-dest_files=["res://.godot/imported/ctij_station_tilemap.png-17795f4074d7e7a12958730b57c46659.ctex"]
+source_file="res://resources/assets/ctij_mc_idle_side.png"
+dest_files=["res://.godot/imported/ctij_mc_idle_side.png-8149b193970fafb239cb6b35981eb41a.ctex"]
 
 [params]
 

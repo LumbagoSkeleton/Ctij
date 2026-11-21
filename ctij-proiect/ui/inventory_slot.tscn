@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c3a8d47ewulg"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wlpgp"]
+
+[node name="InventorySlot" type="TextureRect" unique_id=838276694]
+self_modulate = Color(0.65012825, 0.6501283, 0.65012825, 1)
+custom_minimum_size = Vector2(72, 72)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1848.0
+offset_bottom = -1008.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_wlpgp")

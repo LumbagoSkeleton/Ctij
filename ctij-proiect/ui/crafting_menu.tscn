@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dq3dh8gycgurq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_m0vqy"]
+specular_color = Color(0.3553136, 0.35531354, 0.35531357, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_srlpo"]
+font_size = 40
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cywfm"]
+
+[node name="CraftingMenu" type="Control" unique_id=1719154466]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="." unique_id=1826881168]
+self_modulate = Color(0.18000486, 0.18000486, 0.18000486, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -610.0
+offset_top = -290.0
+offset_right = 610.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_m0vqy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG" unique_id=1129224069]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InventoryUIContainer" type="VBoxContainer" parent="BG/HBoxContainer" unique_id=760837693]
+custom_minimum_size = Vector2(720, 580)
+layout_mode = 2
+
+[node name="InventoryTitle" type="Label" parent="BG/HBoxContainer/InventoryUIContainer" unique_id=1933319841]
+layout_mode = 2
+text = "Crafting"
+label_settings = SubResource("LabelSettings_srlpo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="Control" parent="BG/HBoxContainer/InventoryUIContainer" unique_id=1658998529]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InventoryBG" type="TextureRect" parent="BG/HBoxContainer/InventoryUIContainer/Inventory" unique_id=1709322514]
+self_modulate = Color(0, 0, 0, 0.25882354)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -210.5
+offset_right = 310.0
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_cywfm")

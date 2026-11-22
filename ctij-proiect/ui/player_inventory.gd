@@ -3,11 +3,11 @@ extends Control
 class_name PlayerInventory
 
 const INVENTORY_SLOT = preload("res://ui/inventory_slot.tscn")
-const INVENTORY_ITEM = preload("uid://dqpbj1asns03h")
+const INVENTORY_ITEM = preload("res://ui/inventory_item.tscn")
 
 const ROWS = 4
 const COLUMNS = 6
-@onready var inventory_item_grid_container: GridContainer = $BG/InventoryUIContainer/Inventory/InventoryBG/InventoryItemGridContainer
+@onready var inventory_item_grid_container: GridContainer = $BG/HBoxContainer/InventoryUIContainer/Inventory/InventoryBG/InventoryItemGridContainer
 
 func _ready():
 	init_slots()

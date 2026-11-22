@@ -10,6 +10,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahknw"]
 size = Vector2(19.5, 8.824219)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wlpgp"]
+radius = 27.018513
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1179106699]
 script = ExtResource("1_7mixf")
 
@@ -39,9 +42,17 @@ position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_ahknw")
 disabled = true
 
+[node name="StationDetecter" type="Area2D" parent="." unique_id=1828492729]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StationDetecter" unique_id=882425335]
+shape = SubResource("CircleShape2D_wlpgp")
+
 [node name="Sword" type="Node2D" parent="." unique_id=437260606]
 script = ExtResource("5_vnqyj")
 metadata/_custom_type_script = "uid://jljhes1dxjx8"
 
 [node name="UICanvas" parent="." unique_id=813790363 instance=ExtResource("2_0yu2b")]
 scale = Vector2(0.333, 0.333)
+
+[connection signal="body_entered" from="StationDetecter" to="." method="_on_station_detecter_body_entered"]
+[connection signal="body_exited" from="StationDetecter" to="." method="_on_station_detecter_body_exited"]

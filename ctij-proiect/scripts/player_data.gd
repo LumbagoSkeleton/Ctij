@@ -18,7 +18,7 @@ func populate_inventory(): # temp function to test inventory mechanics
 		var id = randi_range(0,1)
 		var entries= ITEM_REGISTRY.filter(&"id", id)
 		var entry:ItemEntry = ITEM_REGISTRY.load_entry(entries[0])
-		print_debug("entry: " + str(entry.id) + " " + str(entry.max_amount) + " " + str(entry.sprite.resource_path))
+		#print_debug("entry: " + str(entry.id) + " " + str(entry.max_amount) + " " + str(entry.sprite.resource_path))
 		var max_amount = entry.max_amount
 		var amount
 		if max_amount == -1:

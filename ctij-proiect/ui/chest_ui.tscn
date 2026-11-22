@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dvv8wbpirtxrv"]
+
+[ext_resource type="Script" uid="uid://cn1ycnkjqw07m" path="res://ui/chest_ui.gd" id="1_5jldo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sqevm"]
+specular_color = Color(0.3553136, 0.35531354, 0.35531357, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_67pvq"]
+font_size = 40
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wjx1q"]
+
+[node name="ChestUI" type="Control" unique_id=1999750738]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jldo")
+
+[node name="BG" type="TextureRect" parent="." unique_id=873993762]
+self_modulate = Color(0.18000486, 0.18000486, 0.18000486, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -660.0
+offset_top = -290.0
+offset_right = 660.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_sqevm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG" unique_id=1545237133]
+layout_mode = 0
+offset_right = 1320.0
+offset_bottom = 580.0
+alignment = 1
+
+[node name="InventoryUIContainer" type="VBoxContainer" parent="BG/HBoxContainer" unique_id=812219524]
+custom_minimum_size = Vector2(620, 580)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-15, 0)
+
+[node name="InventoryTitle" type="Label" parent="BG/HBoxContainer/InventoryUIContainer" unique_id=443325476]
+layout_mode = 2
+text = "Inventory"
+label_settings = SubResource("LabelSettings_67pvq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="Control" parent="BG/HBoxContainer/InventoryUIContainer" unique_id=67787562]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InventoryBG" type="TextureRect" parent="BG/HBoxContainer/InventoryUIContainer/Inventory" unique_id=732720998]
+self_modulate = Color(0, 0, 0, 0.25882354)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -210.5
+offset_right = 310.0
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_wjx1q")
+
+[node name="InventoryItemGridContainer" type="GridContainer" parent="BG/HBoxContainer/InventoryUIContainer/Inventory/InventoryBG" unique_id=443335480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -160.5
+offset_right = 230.0
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="ChestUIContainer" type="VBoxContainer" parent="BG/HBoxContainer" unique_id=1447201746]
+custom_minimum_size = Vector2(620, 580)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(15, 0)
+
+[node name="ChestTitle" type="Label" parent="BG/HBoxContainer/ChestUIContainer" unique_id=1594019583]
+layout_mode = 2
+text = "Chest"
+label_settings = SubResource("LabelSettings_67pvq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Chest" type="Control" parent="BG/HBoxContainer/ChestUIContainer" unique_id=1302226763]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChestBG" type="TextureRect" parent="BG/HBoxContainer/ChestUIContainer/Chest" unique_id=1640108783]
+self_modulate = Color(0, 0, 0, 0.25882354)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -210.5
+offset_right = 310.0
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_wjx1q")
+
+[node name="ChestItemGridContainer" type="GridContainer" parent="BG/HBoxContainer/ChestUIContainer/Chest/ChestBG" unique_id=976857142]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -160.5
+offset_right = 230.0
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6

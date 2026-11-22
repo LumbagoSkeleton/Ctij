@@ -1,5 +1,7 @@
 extends Node
 
+class_name Chest
+
 const ROWS = 3
 const COLUMNS = 5
 

@@ -52,8 +52,8 @@ func _is_left_mouse_held_down():
 		return 
 		
 	is_left_mouse_held_down = true
-	
-			
+
+
 func player_movement():
 	inputDirection=Input.get_vector("Move Left","Move Right","Move Up","Move Down")
 	if PlayerData.state == PlayerData.State.IDLE:

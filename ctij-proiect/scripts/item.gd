@@ -2,9 +2,13 @@ extends Node
 
 class_name Item
 
-@export var item_amount:int = 0:
-	set(value):
-		item_amount = value
-		if item_amount > max_item_amount:
-			item_amount = max_item_amount
-@export var max_item_amount:int
+@export var id:int
+@export var item_amount:int = 0
+#@export var max_item_amount:int
+
+func init(new_id:int, amount:int) -> void:
+	id = new_id
+	item_amount = amount
+
+func _to_string() -> String:
+	return str(id) + " " + str(item_amount)

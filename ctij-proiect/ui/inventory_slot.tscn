@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c3a8d47ewulg"]
 
+[ext_resource type="Script" uid="uid://057ubyew03nu" path="res://ui/inventory_slot.gd" id="1_d1f1n"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_wlpgp"]
 
 [node name="InventorySlot" type="TextureRect" unique_id=838276694]
@@ -13,3 +15,6 @@ offset_bottom = -1008.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_wlpgp")
+script = ExtResource("1_d1f1n")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

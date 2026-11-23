@@ -35,7 +35,7 @@ func init_slots():
 	for r in range(0,chest.ROWS): 
 		for c in range(0,chest.COLUMNS):
 			var slot = INVENTORY_SLOT.instantiate()
-			inventory_item_grid_container.add_child(slot)
+			chest_item_grid_container.add_child(slot)
 			var grid_pos = Vector2(c,r)
 			var item_data:Item = chest.items.get(grid_pos)
 			if item_data != null: # item in inventory exists at grid_pos - add to slot

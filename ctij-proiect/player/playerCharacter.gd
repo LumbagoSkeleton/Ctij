@@ -35,26 +35,21 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_action_pressed("Open inventory"):
 			if PlayerData.state == PlayerData.State.IDLE:
-				ui_canvas.open_menu(ui_canvas.PLAYER_INVENTORY)
-				PlayerData.state = PlayerData.State.IN_MENU
+				ui_canvas.open_inventory()
 			else:
-				ui_canvas.close_menus(true)
-				PlayerData.state = PlayerData.State.IDLE
+				ui_canvas.close_inventory()
 		elif event.is_action_pressed("Use station"):
 			if closest_station != null:
 				if closest_station is Workbench:
 					if PlayerData.state == PlayerData.State.IDLE:
-						ui_canvas.open_menu(ui_canvas.CRAFTING_MENU)
-						PlayerData.state = PlayerData.State.IN_MENU
+						ui_canvas.open_station_menu(ui_canvas.CRAFTING_MENU)
 					else:
-						ui_canvas.close_menus(false)
-						PlayerData.state = PlayerData.State.IDLE
+						ui_canvas.close_station_menu()
 				elif closest_station is Chest:
 					if PlayerData.state == PlayerData.State.IDLE:
-						ui_canvas.open_menu(ui_canvas.CHEST_UI)
-						PlayerData.state = PlayerData.State.IN_MENU
+						ui_canvas.open_station_menu(ui_canvas.CHEST_UI, closest_station)
 					else:
-						ui_canvas.close_menus(false)
+						ui_canvas.close_station_menu()
 						PlayerData.state = PlayerData.State.IDLE
 
 func _process(delta: float) -> void:
@@ -152,7 +147,6 @@ func move_sword():
 		$Sword.position.y = -18
 		$Sword/SwordSprite2D.rotation_degrees = 0
 		# mouse is in top wedge of the screen
-		player_sword.set_sword_position(Vector2(0, -18))
 	elif relative_mouse_position.x < 0:
 		$Sword.position.x = 18
 		$Sword.position.y = 0

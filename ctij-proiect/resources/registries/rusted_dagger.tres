@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemEntry" format=3 uid="uid://cka6flc8pqy8l"]
+
+[ext_resource type="Script" uid="uid://htiygx68blws" path="res://resources/registries/item_entry.gd" id="1_ype4a"]
+[ext_resource type="Texture2D" uid="uid://bbnu1nqa4osfl" path="res://resources/assets/ctij_item_rusted_dagger.png" id="2_41hu8"]
+
+[resource]
+script = ExtResource("1_ype4a")
+id = 1
+sprite = ExtResource("2_41hu8")
+max_amount = -1
+metadata/_custom_type_script = "uid://htiygx68blws"

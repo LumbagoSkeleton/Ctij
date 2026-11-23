@@ -71,5 +71,5 @@ tile_map_data = PackedByteArray("AAD8//v/AAAAAAAAAAD9//v/AAABAAAAAAD+//v/AAAAAAA
 tile_set = SubResource("TileSet_wlpgp")
 
 [node name="Objects" type="TileMapLayer" parent="." unique_id=2101567074]
-tile_map_data = PackedByteArray("AAABAP7/AQAAAAAAAAADAP7/AQABAAAAAAD8//7/AQABAAAAAAA=")
+tile_map_data = PackedByteArray("AAD9//7/AAAAAAAAAQAAAP7/AAAAAAAAAgABAAMAAAAAAAAAAQA=")
 tile_set = ExtResource("2_o8whc")

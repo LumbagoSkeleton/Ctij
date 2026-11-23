@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c7c116aso48ip"]
+
+[ext_resource type="Script" uid="uid://btldex2cqh64c" path="res://entities/chest.gd" id="1_s5oot"]
+[ext_resource type="Texture2D" uid="uid://cvr4s6a7ygwvv" path="res://resources/assets/ctij_station_tilemap.png" id="2_hbcot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbcot"]
+size = Vector2(24, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wlpgp"]
+radius = 29.15476
+
+[node name="Chest" type="StaticBody2D" unique_id=1677185237]
+collision_priority = 3.0
+script = ExtResource("1_s5oot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1725264439]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_hbcot")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476248046]
+texture = ExtResource("2_hbcot")
+hframes = 2
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=574895992]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=862304706]
+shape = SubResource("CircleShape2D_wlpgp")

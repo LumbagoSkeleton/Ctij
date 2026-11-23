@@ -41,11 +41,11 @@ _property_index = Dictionary[StringName, Dictionary]({
 }
 },
 &"sprite": {
-ExtResource("1_utrdk"): {
-&"nettle": true
-},
 ExtResource("2_5kwlr"): {
 &"rusted_dagger": true
+},
+ExtResource("1_utrdk"): {
+&"nettle": true
 }
 }
 })

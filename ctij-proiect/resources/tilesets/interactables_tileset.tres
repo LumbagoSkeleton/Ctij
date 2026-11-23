@@ -1,22 +1,23 @@
 [gd_resource type="TileSet" format=3 uid="uid://xteus5nfanme"]
 
-[ext_resource type="Script" uid="uid://d4bo0hsgn7nh6" path="res://entities/workbench.gd" id="1_hg0eu"]
+[ext_resource type="PackedScene" uid="uid://c7c116aso48ip" path="res://entities/chest.tscn" id="1_yxekp"]
 [ext_resource type="Texture2D" uid="uid://cvr4s6a7ygwvv" path="res://resources/assets/ctij_station_tilemap.png" id="2_1gwln"]
-[ext_resource type="Script" uid="uid://btldex2cqh64c" path="res://entities/chest.gd" id="2_yq44w"]
+[ext_resource type="PackedScene" uid="uid://clec1a76kww50" path="res://entities/workbench.tscn" id="2_sx142"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6kdpi"]
+scenes/1/scene = ExtResource("1_yxekp")
+scenes/2/scene = ExtResource("2_sx142")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_beh4d"]
 texture = ExtResource("2_1gwln")
 texture_region_size = Vector2i(36, 36)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.74523, -12, 13.382494, -12, 13.063862, 0.95589066, -13.063862, 0.63726044)
-0:0/0/custom_data_0 = ExtResource("1_hg0eu")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.612907, -12, 14.657013, -12, 14.338383, 1.2745247, -15.294277, 0.63726044)
-1:0/0/custom_data_0 = ExtResource("2_yq44w")
 
 [resource]
 tile_size = Vector2i(36, 24)
-physics_layer_0/collision_layer = 2
-custom_data_layer_0/name = "Station_function"
-custom_data_layer_0/type = 24
+physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_beh4d")
+sources/0 = SubResource("TileSetScenesCollectionSource_6kdpi")

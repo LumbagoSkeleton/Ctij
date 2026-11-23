@@ -8,12 +8,13 @@
 [ext_resource type="Script" uid="uid://d1k0yeubp0b7f" path="res://components/hitbox.gd" id="9_t4ikk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahknw"]
-size = Vector2(19.5, 8.824219)
+size = Vector2(19.5, 12.412109)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wlpgp"]
-radius = 27.018513
+radius = 5.656854
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1179106699]
+collision_mask = 3
 script = ExtResource("1_7mixf")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=524287277]
@@ -21,7 +22,7 @@ sprite_frames = ExtResource("3_40f8e")
 animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=681751876]
-position = Vector2(0, 8)
+position = Vector2(0, 6.2060547)
 shape = SubResource("RectangleShape2D_ahknw")
 
 [node name="Health" type="Node" parent="." unique_id=1051805760]
@@ -33,7 +34,6 @@ zoom = Vector2(3, 3)
 
 [node name="HitBox" type="Area2D" parent="." unique_id=715308092]
 visible = false
-collision_mask = 0
 script = ExtResource("9_t4ikk")
 metadata/_custom_type_script = "uid://d1k0yeubp0b7f"
 
@@ -43,6 +43,7 @@ shape = SubResource("RectangleShape2D_ahknw")
 disabled = true
 
 [node name="StationDetecter" type="Area2D" parent="." unique_id=1828492729]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StationDetecter" unique_id=882425335]
 shape = SubResource("CircleShape2D_wlpgp")
@@ -54,5 +55,5 @@ metadata/_custom_type_script = "uid://jljhes1dxjx8"
 [node name="UICanvas" parent="." unique_id=813790363 instance=ExtResource("2_0yu2b")]
 scale = Vector2(0.333, 0.333)
 
-[connection signal="body_entered" from="StationDetecter" to="." method="_on_station_detecter_body_entered"]
-[connection signal="body_exited" from="StationDetecter" to="." method="_on_station_detecter_body_exited"]
+[connection signal="area_entered" from="StationDetecter" to="." method="_on_station_detecter_area_entered"]
+[connection signal="area_exited" from="StationDetecter" to="." method="_on_station_detecter_area_exited"]

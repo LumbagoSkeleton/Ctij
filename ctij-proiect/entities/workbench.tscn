@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://clec1a76kww50"]
+
+[ext_resource type="Script" uid="uid://d4bo0hsgn7nh6" path="res://entities/workbench.gd" id="1_r5ih5"]
+[ext_resource type="Texture2D" uid="uid://cvr4s6a7ygwvv" path="res://resources/assets/ctij_station_tilemap.png" id="2_a43ex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqlai"]
+size = Vector2(24, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a43ex"]
+radius = 29.15476
+
+[node name="Workbench" type="StaticBody2D" unique_id=1265750206]
+script = ExtResource("1_r5ih5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1273495441]
+texture = ExtResource("2_a43ex")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=634308079]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_jqlai")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1532796528]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=774535483]
+shape = SubResource("CircleShape2D_a43ex")

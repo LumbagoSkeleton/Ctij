@@ -28,33 +28,34 @@ func _input(event: InputEvent) -> void:
 		elif event.button_index == 1 and not event.is_pressed():
 			is_left_mouse_pressed = false
 		
-		# right click - use station
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
-			var begin_point = position
-			var space_state = get_world_2d().direct_space_state
-			var end_point = position + event.position - Vector2(960,540) # position in space + event position on screen - offset to center event.position
-			
-			# check on collision layer 2 (where all the objects are
-			var query = PhysicsRayQueryParameters2D.create(position, end_point, 2)
-			var result = space_state.intersect_ray(query)
-			if result:
-				#print_debug("player found")
-				closest_station = result
 				
 	#maybe move all the inputs here later
 	
-	if event is InputEventKey and event.is_action_pressed("Open inventory"):
-		if closest_station == null:
+	if event is InputEventKey:
+		if event.is_action_pressed("Open inventory"):
 			if PlayerData.state == PlayerData.State.IDLE:
-				ui_canvas.toggle_inventory(true)
+				ui_canvas.open_menu(ui_canvas.PLAYER_INVENTORY)
 				PlayerData.state = PlayerData.State.IN_MENU
 			else:
-				ui_canvas.toggle_inventory(false)
+				ui_canvas.close_menus(true)
 				PlayerData.state = PlayerData.State.IDLE
-		elif closest_station is Workbench:
-			pass
-		elif closest_station is Chest:
-			pass
+		elif event.is_action_pressed("Use station"):
+			if closest_station != null:
+				if closest_station is Workbench:
+					if PlayerData.state == PlayerData.State.IDLE:
+						ui_canvas.open_menu(ui_canvas.CRAFTING_MENU)
+						PlayerData.state = PlayerData.State.IN_MENU
+					else:
+						ui_canvas.close_menus(false)
+						PlayerData.state = PlayerData.State.IDLE
+				elif closest_station is Chest:
+					if PlayerData.state == PlayerData.State.IDLE:
+						ui_canvas.open_menu(ui_canvas.CHEST_UI)
+						PlayerData.state = PlayerData.State.IN_MENU
+					else:
+						ui_canvas.close_menus(false)
+						PlayerData.state = PlayerData.State.IDLE
+
 func _process(delta: float) -> void:
 	if is_left_mouse_pressed:
 		_is_left_mouse_held_down()
@@ -158,13 +159,17 @@ func _physics_process(delta: float) -> void:
 		play_idle_anim()
 
 
-func _on_station_detecter_body_entered(body: Station) -> void:
+func _on_station_detecter_area_entered(area: Area2D) -> void:
+	var body = area.get_parent()
 	print_debug(body)
-	if closest_station == null:
-		closest_station = body
-	elif body.position.distance_to(position) < closest_station.position.distance_to(position):
-		closest_station = body
+	if body is Station:
+		if closest_station == null:
+			closest_station = body
+		elif body.position.distance_to(position) < closest_station.position.distance_to(position):
+			closest_station = body
 
 
-func _on_station_detecter_body_exited(body: Station) -> void:
-	closest_station = null # will change this later it has more than a few potential bugs
+func _on_station_detecter_area_exited(area: Area2D) -> void:
+	var body = area.get_parent()
+	if closest_station == body:
+		closest_station = null # will change this later it has more than a few potential bugs

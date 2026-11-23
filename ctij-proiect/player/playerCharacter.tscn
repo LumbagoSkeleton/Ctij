@@ -5,6 +5,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dkqcu83mvljk1" path="res://resources/mc_animations.tres" id="3_40f8e"]
 [ext_resource type="Script" uid="uid://c0tex168c6my2" path="res://components/health.gd" id="3_pcxq3"]
 [ext_resource type="Script" uid="uid://jljhes1dxjx8" path="res://entities/sword.gd" id="5_vnqyj"]
+[ext_resource type="Texture2D" uid="uid://yemdnmraims5" path="res://resources/assets/rusted_dagger.png" id="6_nyv0g"]
 [ext_resource type="Script" uid="uid://d1k0yeubp0b7f" path="res://components/hitbox.gd" id="9_t4ikk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahknw"]
@@ -17,6 +18,7 @@ radius = 27.018513
 script = ExtResource("1_7mixf")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=524287277]
+z_index = 1
 sprite_frames = ExtResource("3_40f8e")
 animation = &"idle_down"
 
@@ -48,8 +50,15 @@ disabled = true
 shape = SubResource("CircleShape2D_wlpgp")
 
 [node name="Sword" type="Node2D" parent="." unique_id=437260606]
+position = Vector2(22, 0)
 script = ExtResource("5_vnqyj")
 metadata/_custom_type_script = "uid://jljhes1dxjx8"
+
+[node name="SwordSprite2D" type="Sprite2D" parent="Sword" unique_id=727533257]
+texture = ExtResource("6_nyv0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword" unique_id=110927493]
+shape = SubResource("CircleShape2D_wlpgp")
 
 [node name="UICanvas" parent="." unique_id=813790363 instance=ExtResource("2_0yu2b")]
 scale = Vector2(0.333, 0.333)

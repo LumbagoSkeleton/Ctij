@@ -96,6 +96,9 @@ func play_idle_anim():
 				sprite_2d.flip_h = false
 
 func move_sword():
+	### make it so player moves with the sword, eg sword is facing 
+	### left so is the player
+	
 	var mouse_position: Vector2 = get_viewport().get_mouse_position()
 	var viewport_size = get_viewport().get_visible_rect().size
 	var viewport_center = viewport_size / 2

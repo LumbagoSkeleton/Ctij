@@ -13,6 +13,7 @@ var is_idle = true
 var is_left_mouse_pressed = false
 var is_left_mouse_held_down = false
 var player_sword : Sword
+var sword_position
 
 var closest_station:Station
 
@@ -132,22 +133,35 @@ func play_idle_anim():
 				sprite_2d.flip_h = false
 
 func move_sword():
+	### make it so player moves with the sword, eg sword is facing 
+	### left so is the player
+	
 	var mouse_position: Vector2 = get_viewport().get_mouse_position()
 	var viewport_size = get_viewport().get_visible_rect().size
 	var viewport_center = viewport_size / 2
 	var relative_mouse_position = viewport_center - mouse_position
 	
 	if relative_mouse_position.y < -abs(relative_mouse_position.x):
-		pass
+		
+		$Sword.position.x = 0
+		$Sword.position.y = 24
+		$Sword/SwordSprite2D.rotation_degrees = 180
 		# mouse is in bottom wedge of the screen
 	elif  relative_mouse_position.y > abs(relative_mouse_position.x):
-		pass
+		$Sword.position.x = 0
+		$Sword.position.y = -18
+		$Sword/SwordSprite2D.rotation_degrees = 0
 		# mouse is in top wedge of the screen
+		player_sword.set_sword_position(Vector2(0, -18))
 	elif relative_mouse_position.x < 0:
-		pass
+		$Sword.position.x = 18
+		$Sword.position.y = 0
+		$Sword/SwordSprite2D.rotation_degrees = 90
 		# mouse is in right wedge of the screen
 	else:
-		pass
+		$Sword.position.x = -18
+		$Sword.position.y = 0
+		$Sword/SwordSprite2D.rotation_degrees = -90
 		# mouse is in left wedge of the screen
 
 func _physics_process(delta: float) -> void:

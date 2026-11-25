@@ -15,7 +15,7 @@ func set_data(id:int, amount:int):
 	# funky method to fit to load_entry but generally there should only be one entry per id so its ok
 	var string_id = ITEM_REGISTRY.filter(&"id", id)[0] 
 	var item_resource:ItemEntry = ITEM_REGISTRY.load_entry(string_id)
-	print_debug(str(id) + " " + str(item_resource.sprite.resource_path) + " " + str(item_resource.max_amount))
+	#print_debug(str(id) + " " + str(item_resource.sprite.resource_path) + " " + str(item_resource.max_amount))
 	var texture = item_resource.sprite
 	texture_rect.texture = texture
 	if amount != -1:
@@ -38,6 +38,7 @@ func _input(event: InputEvent) -> void:
 		elif event.is_released(): # end drag
 			if dragged:
 				dragged = false
+				print_debug("item position " + str(global_position))
 				snap_to_slot.emit(global_position)
 
 func _process(delta: float) -> void:
@@ -50,7 +51,7 @@ func _process(delta: float) -> void:
 		#DisplayServer.mouse_get_position().y / 1.5), 0.25)
 		#position = Vector2(DisplayServer.mouse_get_position().x, DisplayServer.mouse_get_position().y)
 		#position = Vector2(get_global_mouse_position().x - 180, get_global_mouse_position().y - 100) 
-		global_position = get_global_mouse_position()
+		global_position = get_global_mouse_position() - Vector2(12,0)
 
 
 func _on_icon_mouse_entered() -> void:

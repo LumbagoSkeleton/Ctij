@@ -28,7 +28,8 @@ func _input(event: InputEvent) -> void:
 			is_left_mouse_pressed= true
 		elif event.button_index == 1 and not event.is_pressed():
 			is_left_mouse_pressed = false
-		
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
+			print_debug(get_global_mouse_position())
 				
 	#maybe move all the inputs here later
 	

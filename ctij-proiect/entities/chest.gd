@@ -4,11 +4,12 @@ class_name Chest
 
 const ITEM_REGISTRY = preload("uid://c0feiqx4dv1fe")
 const ROWS = 3
-const COLUMNS = 5
+const COLUMNS = 6
 
-var items:Dictionary[Vector2, Item]
+@onready var inventory:Inventory = Inventory.new()
 
 func _ready():
+	inventory.set_size(ROWS,COLUMNS)
 	populate_chest()
 
 func populate_chest():
@@ -26,4 +27,4 @@ func populate_chest():
 			amount = randi_range(1, max_amount)
 		item.init(id, amount)
 		var grid_pos = Vector2(randi_range(0,COLUMNS),randi_range(0,ROWS))
-		items.get_or_add(grid_pos,item)
+		inventory.add_item(grid_pos, item)

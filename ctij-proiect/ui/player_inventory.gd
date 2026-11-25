@@ -91,8 +91,6 @@ func clear():
 		slot.inv_item = null
 
 func inventory_move_item(item:Item, grid_pos:Vector2i):
-	# the server owns the inventory now, so the move travels as an action; the authoritative
-	# state comes back and refreshes the visual through inventory.updated_items
 	var source_grid_pos = PlayerData.inventory.get_grid_pos_of_item(item)
 	if source_grid_pos == null:
 		return

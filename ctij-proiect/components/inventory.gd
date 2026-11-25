@@ -23,7 +23,10 @@ func add_item(grid_pos:Vector2i, item:Item):
 	updated.emit()
 
 func update_item(grid_pos:Vector2i, item:Item):
-	items[grid_pos] = item
+	if item.item_amount == 0:
+		remove_item(grid_pos)
+	else:
+		items[grid_pos] = item
 	updated.emit()
 
 func move_item(new_grid_pos:Vector2i, item:Item):
@@ -49,9 +52,11 @@ func remove_item(grid_pos:Vector2i):
 func stack_items(old_grid_pos:Vector2i, new_grid_pos:Vector2i):
 	var old_item:Item = items.get(old_grid_pos)
 	var new_item:Item = items.get(new_grid_pos)
-	if old_item.id != new_item.id:
+	if old_item.id != new_item.id: # not the same type of item
 		return
 	var item_data:ItemEntry = ITEM_REGISTRY.load_entry(ITEM_REGISTRY.filter(&"id", old_item.id)[0])
+	if item_data.max_amount == -1: # item itself is unstackable
+		return
 	if old_item.item_amount + new_item.item_amount > item_data.max_amount: # overflow - 2 items
 		old_item.item_amount += new_item.item_amount
 		old_item.item_amount -= item_data.max_amount
